@@ -7,7 +7,7 @@ const app = express();
 const logger = require("morgan");
 const mainRouter = require("./src/routes");
 
-app.listen(port, () => {
+app.listen(process.env.PORT||port, () => {
   console.log("Server is running on port " + port);
 });
 
